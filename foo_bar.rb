@@ -1,5 +1,8 @@
 def foo_bar_rule(number)
   n = Integer(number)
+rescue
+  'Not a number ERROR'
+else
   if n % 3 == 0 && n % 5 == 0
     'FooBar'
   elsif n % 5 == 0
@@ -13,8 +16,9 @@ end
 
 def foo_bar(number)
   n = Integer(number)
-  rescue
-  puts 'Invalid input, not an integer!'
+rescue
+  'Not a number ERROR!'
+else
 
   return 0 if n.zero?
 
